@@ -1,0 +1,16 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  server:
+    # Deshabilita la protección de instancias
+    enable-self-preservation: false
+    # Intervalo para expiar instancias inactivas (en milisegundos)
+    eviction-interval-timer-in-ms: 10000  # 10 segundos
+    # Umbral de renovación más bajo
+    renewal-threshold-update-interval-ms: 15000
